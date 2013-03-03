@@ -95,8 +95,8 @@ if has("gui_running")
 else
   set t_Co=256
   let molokai_original=1
-  " colorscheme molokai
-  colorscheme zenburn
+  colorscheme molokai
+  " colorscheme zenburn
   set nonu
 endif
 
