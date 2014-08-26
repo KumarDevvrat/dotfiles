@@ -1,4 +1,5 @@
 #
+#
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -19,7 +20,7 @@ ZSH_THEME="miloshadzic"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git command-not-found history history-substring-search zsh-syntax-highlighting extract)
+plugins=(git django command-not-found history history-substring-search zsh-syntax-highlighting extract z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -31,20 +32,25 @@ alias go="gnome-open"
 alias biggest='find -type f -printf '\''%s %p\n'\'' | sort -nr | head -n 40 | gawk "{ print \$1/1000000 \" \" \$2 \" \" \$3 \" \" \$4 \" \" \$5 \" \" \$6 \" \" \$7 \" \" \$8 \" \" \$9 }"'
 alias update="sudo apt-get update && sudo apt-get upgrade"
 alias mail="thunderbird --compose"
-alias rtm="/home/devvrat/Scripts/rtm.sh"
 alias m="mplayer -loop 0"
 alias e="cd .."
 alias downloadsite="wget --recursive --no-clobber --page-requisites --convert-links --no-parent"
 alias :q="exit"
-alias selfstat="python Scripts/selfspy/selfstats.py"
 export VEKTOR_HOME="/home/devvrat/Vektor/"
-alias vektor="/home/devvrat/Vektor/bin/vektor " 
-alias idea="/home/devvrat/Setups/idea-IU-135.480/bin/idea.sh"
-alias mvn="/home/devvrat/Setups/apache-maven-3.2.1/bin/mvn" 
-alias cdvektor="cd /home/devvrat/Work/vektor-project/vektor.insight-flow/trunk" 
+alias idea="/home/devvrat/setups/idea-IU-135.480/bin/idea.sh"
+alias mvn="/home/devvrat/setups/apache-maven-3.2.1/bin/mvn" 
+alias cdvektor="cd /home/devvrat/work/vektor-project/vektor.insight-flow/trunk" 
+alias cdhaskell="cd /home/devvrat/work/haskell" 
+alias cdglyve="cd /home/devvrat/work/glyve/code/glyve && workon glyve" 
+alias ip="ipython" 
+alias p="/home/devvrat/setups/pycharm-3.1.3/bin/pycharm.sh"
 
 unset http_proxy
 unset https_proxy
+
+export WORKON_HOME=/home/devvrat/.virtualenvs
+export PROJECT_HOME=/home/devvrat/work/glyve/code
+source /usr/local/bin/virtualenvwrapper.sh
 
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
